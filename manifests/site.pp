@@ -21,6 +21,16 @@
 # will be included in every node's catalog, *in addition* to any classes
 # specified in the console for that node.
 
+node 'dnase.puppetlabs.vm' {
+  # whatever I put in here is going to apply
+  include examples::puppetize
+  notify { "Now I'm getting my node definition from this one!": }
+}
+
+node /.*\.puppetlabs\.vm/ {
+  notify { "This is a regex node def!": }
+}
+
 node default {
   # This is where you can declare classes for all nodes.
   # Example:
