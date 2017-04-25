@@ -4,6 +4,8 @@ This is the classroom control repository for the Puppetizing Infrastructure clas
 
 ## Usage
 
+### This is JBuschkamps!
+
 Small site modules should be developed in the `site` directory. This is appended
 to the `$modulepath` by the `environment.conf` file so that Puppet can use modules
 from this directory.
