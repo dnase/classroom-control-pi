@@ -28,7 +28,7 @@ node jim.puppetlabs.vm {
   # example code for the classroom
   include examples::puppetize
   
-  notify { "Hello world! Linux: I am ${::fqdn}": }
+  # notify { "Hello world! Linux: I am ${::fqdn}": }
 }
 
 node default {
