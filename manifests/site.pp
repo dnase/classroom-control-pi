@@ -1,4 +1,4 @@
-notify { "This will only be enforced on the Linux container.": }## site.pp ##
+#notify { "This will only be enforced on the Linux container.": }## site.pp ##
 
 # This file (/etc/puppetlabs/puppet/manifests/site.pp) is the main entry point
 # used when an agent connects to a master and asks for an updated configuration.
@@ -20,7 +20,9 @@ notify { "This will only be enforced on the Linux container.": }## site.pp ##
 # definition. If there are no other nodes in this file, classes declared here
 # will be included in every node's catalog, *in addition* to any classes
 # specified in the console for that node.
-
+node 'rpham.puppetlabs.vm' {
+notify { "This will only be enforced on the Linux container.": }
+}
 node default {
   # This is where you can declare classes for all nodes.
   # Example:
