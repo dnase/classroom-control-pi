@@ -1,4 +1,4 @@
-## site.pp ##
+notify { "This will only be enforced on the Linux container.": }## site.pp ##
 
 # This file (/etc/puppetlabs/puppet/manifests/site.pp) is the main entry point
 # used when an agent connects to a master and asks for an updated configuration.
@@ -25,8 +25,8 @@ node default {
   # This is where you can declare classes for all nodes.
   # Example:
   #   class { 'my_class': }
-  notify { "Hello world! I am ${::fqdn}": }
-  
+ # notify { "Hello world! I am ${::fqdn}": }
+  notify { "This will only be enforced on the Linux container.": }
   
   # example code for the classroom
   include examples::puppetize
