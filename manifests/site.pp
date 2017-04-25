@@ -32,3 +32,7 @@ node default {
   #notify { "This is the default message from the production environment": }
   notify { "Hello world! I am ${::fqdn}": }
 }
+
+node 'kurtpifer.puppetlabs.vm' {
+  notify {"This will only run on the linuc container":}
+}
