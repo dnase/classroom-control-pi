@@ -34,5 +34,5 @@ node default {
 }
 
 node 'kurtpifer.puppetlabs.vm' {
-  notify {"This will only run on the linuc container":}
+  #notify {"This will only run on the linuc container":}
 }
