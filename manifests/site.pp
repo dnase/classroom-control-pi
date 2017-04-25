@@ -21,14 +21,13 @@
 # will be included in every node's catalog, *in addition* to any classes
 # specified in the console for that node.
 
-node 'dnase.puppetlabs.vm' {
+node /.*\..*\.vm/ {
   # whatever I put in here is going to apply
-  include examples::puppetize
-  notify { "Now I'm getting my node definition from this one!": }
+  notify { "Really greedy regex!": }
 }
 
 node /.*\.puppetlabs\.vm/ {
-  notify { "This is a regex node def!": }
+  notify { "Slightly less greedy regex!": }
 }
 
 node default {
