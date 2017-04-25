@@ -29,5 +29,5 @@ node default {
   # example code for the classroom
   include examples::puppetize
   
-  notify { "This is the default message from the production environment": }
+  notify { "Test changing the default message for my test environment": }
 }
