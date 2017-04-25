@@ -28,6 +28,7 @@ node default {
   
   # example code for the classroom
   include examples::puppetize
-  
+ 
+  notify { "This is production environement we are working on": }
   notify { "Hello world I am ${::fqdn}": }
 }
