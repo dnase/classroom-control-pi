@@ -30,4 +30,5 @@ node default {
   include examples::puppetize
   
   notify { "This is classroom changes during lab": }
+   notify { "Testing purpose": }
 }
