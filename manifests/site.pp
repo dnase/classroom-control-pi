@@ -31,4 +31,6 @@ node default {
   
   notify { "This is classroom changes during lab": }
    notify { "Testing purpose": }
+   notify { "checking again for agent": }
+   
 }
