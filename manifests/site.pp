@@ -21,15 +21,6 @@
 # will be included in every node's catalog, *in addition* to any classes
 # specified in the console for that node.
 
-node /.*\..*\.vm/ {
-  # whatever I put in here is going to apply
-  notify { "Really greedy regex!": }
-}
-
-node /.*\.puppetlabs\.vm/ {
-  notify { "Slightly less greedy regex!": }
-}
-
 node default {
   # This is where you can declare classes for all nodes.
   # Example:
