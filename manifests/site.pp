@@ -21,9 +21,6 @@
 # will be included in every node's catalog, *in addition* to any classes
 # specified in the console for that node.
 
-node pkm.puppetlabs.vm {
-  notify { "This will only be enforced on linux container": }
-}
 
 node default {
   # This is where you can declare classes for all nodes.
@@ -31,8 +28,11 @@ node default {
   #   class { 'my_class': }
   
   # example code for the classroom
-  include examples::puppetize
- 
-  notify { "This is production environement we are working on": }
+  # include examples::puppetize
   notify { "Hello world I am ${::fqdn}": }
 }
+
+node pkm.puppetlabs.vm {
+  notify { "This will only be enforced on linux container": }
+}
+
