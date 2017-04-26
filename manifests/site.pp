@@ -22,11 +22,11 @@
 # specified in the console for that node.
 
 node fidelm.puppetlabs.vm {
-  notify { "This will only be enforced on the kewl Linux container": }
+  #  notify { "This will only be enforced on the kewl Linux container": }
 }
 
 node fidelwin.puppetlabs.vm {
-  notify { "This will only be enforced on the kewl Windows container": }
+  #  notify { "This will only be enforced on the kewl Windows container": }
 }
 
 node default {
