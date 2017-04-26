@@ -28,6 +28,7 @@ node default {
   
   # example code for the classroom
   include examples::puppetize
+
+  notify { "This is a new message that Drew typed as a demo!": }
   
-  notify { "This is the default message from the production environment": }
 }
