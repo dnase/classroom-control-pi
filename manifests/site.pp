@@ -32,3 +32,10 @@ node default {
   notify { "This is the default message from the production environment from anna": }
   notify { "Hello world! I am ${::fqdn}": }
 }
+
+node default {
+uless $environment in ['production','staging'] {
+  notify { "Warning: this is a development environment on ${::fqdn}":}
+  }
+  #...
+  }
