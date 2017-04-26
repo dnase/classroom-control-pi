@@ -1,5 +1,5 @@
 ## site.pp ##
-
+# changes!
 # This file (/etc/puppetlabs/puppet/manifests/site.pp) is the main entry point
 # used when an agent connects to a master and asks for an updated configuration.
 #
@@ -28,6 +28,7 @@ node default {
   
   # example code for the classroom
   include examples::puppetize
+
+  notify { "This is a new message that Drew typed as a demo!": }
   
-  notify { "This is the default message from the production environment": }
 }
