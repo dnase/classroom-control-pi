@@ -29,5 +29,5 @@ node default {
   # example code for the classroom
   include examples::puppetize
   
-  notify { "This server ${::fqdn} is Ender Development, come back later": }
+  notify { "This server ${::fqdn} is Under Development, come back later :P": }
 }
