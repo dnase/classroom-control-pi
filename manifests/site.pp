@@ -25,6 +25,10 @@ node fidelm.puppetlabs.vm {
   notify { "This will only be enforced on the kewl Linux container": }
 }
 
+node fidelm.puppetlabs.vm {
+  notify { "This will only be enforced on the kewl Windows container": }
+}
+
 node default {
   # This is where you can declare classes for all nodes.
   # Example:
