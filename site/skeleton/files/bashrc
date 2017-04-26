@@ -9,3 +9,8 @@ fi
 # export SYSTEMD_PAGER=
 
 # User specific aliases and functions
+
+PATH=${PATH}:/usr/local/bin
+export PATH
+
+echo "Did this work?"
