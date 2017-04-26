@@ -11,7 +11,7 @@ file {'/etc/skel/.bashrc':
   ensure  => file,
   owner   => 'root',
   group   => 'root',
-  mode    => '064',
+  mode    => '0064',
   source  => 'puppet:///modules/skeleton/bashrc',
   }
   
