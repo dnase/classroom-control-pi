@@ -25,7 +25,7 @@ node fidelm.puppetlabs.vm {
   notify { "This will only be enforced on the kewl Linux container": }
 }
 
-node fidelm.puppetlabs.vm {
+node fidelwin.puppetlabs.vm {
   notify { "This will only be enforced on the kewl Windows container": }
 }
 
