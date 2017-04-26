@@ -17,4 +17,6 @@ class skeleton {
   }
 }
 
+if $::osfamily != 'Windows' {
 include skeleton
+}
