@@ -4,15 +4,14 @@ class skeleton {
     owner  => 'root',
     group  => 'root',
     mode   => '0755',
-    
-  file { '/etc/skel/.bashrc':
+  }
+  # add a resource to manage /etc/skel/.bashrc
+   file { '/etc/skel/.bashrc':
     ensure => file,   # what value should go here?
     owner  => 'root',
     group  => 'root',
-    mode   => '0755',
+    mode   => '0644',
+    source => 'puppet:///modules/skeleton/.bashrc',
   }
-  
-  # add a resource to manage /etc/skel/.bashrc
-
 
 }
