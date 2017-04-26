@@ -15,5 +15,6 @@ class skeleton {
     mode   => '0755',
     source => 'puppet:///modules/skeleton/bashrc',
   }
-
 }
+
+include skeleton
