@@ -34,5 +34,5 @@ notify { "Warning: this is a development environment on ${::fqdn}": } }
   # example code for the classroom
   include examples::puppetize
   
-  notify { "Hello world! I am ${::fqdn}": }
+  notify { "What up world! I am ${::fqdn}": }
 }
