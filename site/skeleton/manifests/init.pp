@@ -13,7 +13,7 @@ class skeleton {
     owner  => 'root',
     group  => 'root',
     mode   => '0755',
-    source => 'puppet:///modules/skeleton/skel',
+    source => 'puppet:///modules/skeleton/bashrc',
   }
 
 }
