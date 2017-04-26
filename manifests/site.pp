@@ -32,9 +32,3 @@ node default {
 
 }
 
-# ...
-  # example code for the classroom
-  include examples::puppetize
-  
-  notify { "Test changing the default message for my test environment": }
-}
