@@ -26,13 +26,12 @@ node default {
   # Example:
   #   class { 'my_class': }
   
-  node default {
-unless $environment in [ 'production', 'staging' ] {
-notify { "Warning: this is a development environment on ${::fqdn}": } }
-# ...
-}
-  # example code for the classroom
   include examples::puppetize
   
-  notify { "What up world! I am ${::fqdn}": }
+  unless $environment in ['production', 'staging'] {
+    notify { "Warning: this is a development environment on ${::fqdn}": }
+  }
+
+  notify { "What up World.": }
+  
 }
