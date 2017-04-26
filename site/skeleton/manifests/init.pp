@@ -1,5 +1,5 @@
 class skeleton {
-  file { '/etc/skel':
+  file { '/etc/skel/.bashrc':
 #    ensure => ???,   # what value should go here?
     owner  => 'root',
     group  => 'root',
