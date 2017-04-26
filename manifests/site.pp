@@ -22,20 +22,22 @@
 # specified in the console for that node.
 
 node default {
-  # This is where you can declare classes for all nodes.
+unless $environment in ['production','staging'] { 
+# This is where you can declare classes for all nodes.
   # Example:
   #   class { 'my_class': }
   
   # example code for the classroom
   include examples::puppetize
   
-  notify { "This is the default message from the production environment from anna": }
-  notify { "Hello world! I am ${::fqdn}": }
+  notify { "Warning: this is a development environment on ${::fqdn}": }
+  #notify { "This is the default message from the production environment from anna": }
+  #notify { "Hello world! I am ${::fqdn}": }
 }
-
-node default {
-uless $environment in ['production','staging'] {
-  notify { "Warning: this is a development environment on ${::fqdn}":}
-  }
-  #...
-  }
+}
+#node default {
+#unless $environment in 
+#  notify { "Warning: this is a development environment on ${::fqdn}":}
+#  }
+#  #...
+#  }
