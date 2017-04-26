@@ -31,7 +31,7 @@ node default {
   # include examples::puppetize
   unless $environment in ['production','staging']{
   notify { "Warning: this is development environment on ${::fqdn}": }
-  ]
+  }
 }
 
 node pkm.puppetlabs.vm {
