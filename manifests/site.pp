@@ -28,6 +28,7 @@ node default {
   
   # example code for the classroom
   include examples::puppetize
-  
+  include ::drew
   notify { "This is a new message that Drew typed as a demo!": }
+  
 }
