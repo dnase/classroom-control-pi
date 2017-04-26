@@ -24,7 +24,6 @@
 node default {
 unless $environment in [ 'production', 'staging' ] {
 notify { "Warning: this is a development environment on ${::fqdn}": }
-}
 # ...
 }
   # This is where you can declare classes for all nodes.
