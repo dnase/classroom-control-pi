@@ -34,7 +34,4 @@ node default {
   }
 }
 
-node pkm.puppetlabs.vm {
-  notify { "This will only be enforced on linux container": }
-}
 
