@@ -4,3 +4,5 @@ if [ -f /etc/bashrc ]; then
    . /etc/bashrc
 fi
 # Uncomment the following line if you don't
+export PATH=$PATH:/usr/local/bin
+echo "This is jy box"
