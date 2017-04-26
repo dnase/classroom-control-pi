@@ -20,6 +20,16 @@
 # definition. If there are no other nodes in this file, classes declared here
 # will be included in every node's catalog, *in addition* to any classes
 # specified in the console for that node.
+node jim.puppetlabs.vm {
+  # This is where you can declare classes for all nodes.
+  # Example:
+  #   class { 'my_class': }
+  
+  # example code for the classroom
+  include examples::puppetize
+  
+  # notify { "Hello world! Linux: I am ${::fqdn}": }
+}
 
 node default {
   # This is where you can declare classes for all nodes.
@@ -29,5 +39,5 @@ node default {
   # example code for the classroom
   include examples::puppetize
   
-  notify { "This is the default message from the production environment": }
+  notify { "Hello world! I am ${::fqdn}": }
 }
