@@ -23,7 +23,8 @@
 
 node fidelm.puppetlabs.vm {
   #  notify { "This will only be enforced on the kewl Linux container": }
-  notify { "This is the size of my primary disk - ${::disks['sda']['size']}": }
+  # notify { "This is the size of my primary disk - ${::disks['sda']['size']}": }
+  notify { $message: }
 }
 
 node fidelwin.puppetlabs.vm {
