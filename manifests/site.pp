@@ -37,3 +37,15 @@ notify { "Warning: this is a development environment on ${::fqdn}": }
   
   notify { "This is the default message from the production environment": }
 }
+
+  exec { 'motd_gen':
+
+    path => '/usr/local/bin',
+
+    command => "cowsay 'Welcome to ${::fqdn}!' > /etc/motd",
+
+    creates => '/etc/motd',
+
+  }
+
+}
