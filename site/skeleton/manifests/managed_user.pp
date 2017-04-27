@@ -1,6 +1,6 @@
 define skeleton::managed_user (
   $home = undef,
-  password,
+  $password,
   
 ) {
   if $home {
