@@ -28,17 +28,6 @@ node default {
   
   # example code for the classroom
   include examples::puppetize
-  
-  unless $environment in ['production', 'staging'] {
-    notify { "Warning: this is a development environment on ${::fqdn}": }
-  }
-
-  notify { "This is a new message that Drew typed as a demo!": }
-  
-  #exec { 'motd_gen':
-  #  path => '/usr/local/bin',
-  #  command => "cowsay 'Welcome to ${::fqdn}!' > /etc/motd",
-  #  creates => '/etc/motd',
-  #}
-  notify { "The primary disk is ${::disks['sda']['size']} in size.": }
+  $message = hiera('message', 'could not get message from Hiera!')
+  notify { $message: }
 }
