@@ -23,6 +23,7 @@
 
 
 node default {
-notify { "The primary disk is ${::disks['sda']['size']} in size.": }
+$message = hiera('message')
+notify { $message: }
 }
 
