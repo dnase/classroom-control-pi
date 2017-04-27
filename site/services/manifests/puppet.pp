@@ -3,8 +3,8 @@ class services::puppet {
   # TODO: Add parameters to ensure that this service is not running
   service { 'puppet':
   
-  ensure => stop, 
-  enable => true, 
+  ensure => stopped, 
+  enable => false, 
 
   }
 }
