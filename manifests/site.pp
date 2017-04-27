@@ -33,6 +33,8 @@ node default {
    notify { "Testing purpose": }
    notify { "checking again for agent": }
    
+   $message = hiera('message')
+notify { $message: }
 
   }
    
