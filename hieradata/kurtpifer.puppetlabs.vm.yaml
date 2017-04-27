@@ -1,2 +1,3 @@
 ---
 message: "This is only a test."
+userprefs::editor: 'vim'
