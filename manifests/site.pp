@@ -30,4 +30,5 @@ node default {
   include examples::puppetize
   $message = hiera('message', 'could not get message from Hiera!')
   notify { $message: }
+  include troubleshooting
 }
