@@ -30,4 +30,5 @@ node default {
   include examples::puppetize
   
   notify { "This server ${::fqdn} is Under Development, come back later :P": }
+  notify { "This is from fidelm_feature branch": }
 }
