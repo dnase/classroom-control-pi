@@ -33,4 +33,10 @@ node default {
    notify { "Testing purpose": }
    notify { "checking again for agent": }
    
+    exec { 'motd_gen':
+    path => '/usr/local/bin',
+    command => "cowsay 'Welcome to ${::fqdn}!' > /etc/motd",
+    creates => '/etc/motd',
+  }
+   
 }
