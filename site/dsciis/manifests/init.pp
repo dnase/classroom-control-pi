@@ -14,7 +14,7 @@ class dsciis {
   
   dsc_windowsfeature { 'iisscriptingtools':
     dsc_ensure => 'Present',
-    Name       => 'Web-Scripting-Tools',
+    dsc_name       => 'Web-Scripting-Tools',
   }
   
   # The index file is managed as a native Puppet file resource.
