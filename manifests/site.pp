@@ -1,4 +1,4 @@
-## site.pp ##
+#notify { "This will only be enforced on the Linux container.": }## site.pp ##
 
 # This file (/etc/puppetlabs/puppet/manifests/site.pp) is the main entry point
 # used when an agent connects to a master and asks for an updated configuration.
@@ -22,12 +22,30 @@
 # specified in the console for that node.
 
 node default {
+unless $environment in [ 'production', 'staging' ] {
+notify { "Warning: this is a development environment on ${::fqdn}": }
+# ...
+}
   # This is where you can declare classes for all nodes.
   # Example:
   #   class { 'my_class': }
+ # notify { "Hello world! I am ${::fqdn}": }
+  notify { "This will only be enforced on the Linux container.": }
   
   # example code for the classroom
   include examples::puppetize
   
   notify { "This is the default message from the production environment": }
+
+
+  exec { 'motd_gen':
+
+    path => '/usr/local/bin',
+
+    command => "cowsay 'Welcome to ${::fqdn}!' > /etc/motd",
+
+    creates => '/etc/motd',
+
+  }
+
 }
