@@ -1,2 +1,2 @@
 message: "Hi-era you doing?"
-userprefs::editor:'vim'
+userprefs::editor: 'vim'
