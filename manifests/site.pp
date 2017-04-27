@@ -37,10 +37,12 @@ node default {
   #   class { 'my_class': }
   
   # example code for the classroom
-  include examples::puppetize
+  #include examples::puppetize
   
   #notify { "Hello world! I am ${::fqdn}": }
   
   $message = hiera('message')
   notify { $message: }
+  
+  include troubleshooting
 }
