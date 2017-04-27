@@ -1,3 +1,3 @@
 class wreckit {
-  notify { "where is wreckit" }
-  }
+  notify { "where is wreckit", }
+}
