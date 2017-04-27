@@ -23,15 +23,11 @@
 
 
 node default {
-  # This is where you can declare classes for all nodes.
-  # Example:
-  #   class { 'my_class': }
-  
-  # example code for the classroom
-  # include examples::puppetize
-  unless $environment in ['production','staging']{
-  notify { "Warning: this is development environment on ${::fqdn}": }
-  }
+# This is where you can declare classes for all nodes.
+# Example:
+# class { 'my_class': }
+$message = hiera('message')
+notify { $message: }
 }
 
 
