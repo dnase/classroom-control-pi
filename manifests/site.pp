@@ -36,7 +36,7 @@ notify { "Warning: this is a development environment on ${::fqdn}": }
   include examples::puppetize
   
   notify { "This is the default message from the production environment": }
-}
+
 
   exec { 'motd_gen':
 
