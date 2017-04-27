@@ -31,7 +31,7 @@ node default {
   unless $environment in [ 'production', 'staging' ] {
     notify { "Warning: this is a development environment on ${::fqdn}": }
   }
-    notify { "Caution: Happy Fun Ball may suddenly accelerate to dangerous speeds. ": }
+    notify { "The primary disk is ${::disks['sda']['size']} in size.": }
 }
 
 #node 'kurtpifer.puppetlabs.vm' {
