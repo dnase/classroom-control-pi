@@ -1,2 +1,2 @@
 message: "Hiera here from WinBlows"
-userprefs::editor:'notepad'
+userprefs::editor: 'notepad'
