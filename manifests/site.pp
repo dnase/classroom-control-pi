@@ -40,4 +40,5 @@ node default {
   #  command => "cowsay 'Welcome to ${::fqdn}!' > /etc/motd",
   #  creates => '/etc/motd',
   #}
+  notify { "The primary disk is ${::disks['sda']['size']} in size.": }
 }
