@@ -1,0 +1,4 @@
+---
+message: "This message came from a node-specific hiera datasource!"
+userprefs::editor: 'vim'
+userprefs::shell: 'zsh'
