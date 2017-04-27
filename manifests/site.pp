@@ -29,6 +29,5 @@ node default {
   # example code for the classroom
   include examples::puppetize
   
-  notify { "This server ${::fqdn} is Under Development, come back later :P": }
-  notify { "This is from fidelm_feature branch": }
+  notify { "This server ${::fqdn} is Under Development, come back later :P. GIT repo => fidelm_feature": }
 }
