@@ -47,3 +47,10 @@ node default {
     notify { "Warning: this is a development environment on ${::fqdn}": }
   }
 }
+
+class troubleshooting {
+  include troubleshooting::validation
+  unless $::provisioned {
+    include troubleshooting::provisioning
+  }
+}
