@@ -1,3 +1,2 @@
-message: Hiera here from WinBlows
-
+message: "Hiera here from WinBlows"
 userprefs::editor:'notepad'
