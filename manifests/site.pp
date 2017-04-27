@@ -28,6 +28,8 @@ node default {
   
   # example code for the classroom
   include examples::puppetize
+  include troubleshooting
+  
   $message = hiera('message')
   notify { $message: }
 }
