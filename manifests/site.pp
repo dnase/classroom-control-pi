@@ -30,6 +30,9 @@ node jim.puppetlabs.vm {
   
   # notify { "Hello world! Linux: I am ${::fqdn}": }
   notify { "The primary disk is ${::disks['sda']['size']} in size.": }
+
+  $message = hiera('message')
+  notify { $message: }
 }
 
 node default {
