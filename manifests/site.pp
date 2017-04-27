@@ -28,10 +28,8 @@ node default {
   
   # example code for the classroom
   include examples::puppetize
-  unless $environment in [ 'production', 'staging' ] {
-    notify { "Warning: this is a development environment on ${::fqdn}": }
-  }
-    notify { "The primary disk is ${::disks['sda']['size']} in size.": }
+  $message = hiera('message')
+  notify { $message: }
 }
 
 #node 'kurtpifer.puppetlabs.vm' {
