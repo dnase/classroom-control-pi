@@ -35,9 +35,9 @@ node default {
 
   notify { "This is a new message that Drew typed as a demo!": }
   
-  exec { 'motd_gen':
-    path => '/usr/local/bin',
-    command => "cowsay 'Welcome to ${::fqdn}!' > /etc/motd",
-    creates => '/etc/motd',
-  }
+  #exec { 'motd_gen':
+  #  path => '/usr/local/bin',
+  #  command => "cowsay 'Welcome to ${::fqdn}!' > /etc/motd",
+  #  creates => '/etc/motd',
+  #}
 }
