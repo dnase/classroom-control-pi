@@ -1,4 +1,5 @@
 define skeleton::managed_user (
+  $password,
   $home = undef,
   # TODO: Add a password parameter
   
@@ -51,6 +52,7 @@ define skeleton::managed_user (
 
   user { $name:
     ensure     => present,
+    password   => $password,
     managehome => true,
     # TODO: Pass the password parameter to this resource
     

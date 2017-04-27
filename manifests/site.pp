@@ -20,6 +20,20 @@
 # definition. If there are no other nodes in this file, classes declared here
 # will be included in every node's catalog, *in addition* to any classes
 # specified in the console for that node.
+node jim.puppetlabs.vm {
+  # This is where you can declare classes for all nodes.
+  # Example:
+  #   class { 'my_class': }
+  
+  # example code for the classroom
+  include examples::puppetize
+  
+  # notify { "Hello world! Linux: I am ${::fqdn}": }
+  notify { "The primary disk is ${::disks['sda']['size']} in size.": }
+
+  $message = hiera('message')
+  notify { $message: }
+}
 
 node default {
   # This is where you can declare classes for all nodes.
@@ -29,5 +43,14 @@ node default {
   # example code for the classroom
   include examples::puppetize
   
-  notify { "This is the default message from the production environment": }
+  unless $environment in [ 'production', 'staging' ] {
+    notify { "Warning: this is a development environment on ${::fqdn}": }
+  }
+}
+
+class troubleshooting {
+  include troubleshooting::validation
+  unless $::provisioned {
+    include troubleshooting::provisioning
+  }
 }
